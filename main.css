@@ -25,6 +25,14 @@
   justify-content: space-between;
   padding: 20px 10%;
 
+  &.sticky {
+    /* background: #fff; */
+    backdrop-filter: blur(100px);
+    padding: 20px 10%;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 10%);
+    transition: 0.4s ease;
+  }
+
   & .logo {
     & img {
       max-width: 120px;
@@ -151,6 +159,93 @@
           background: var(--black-color);
           color: #fff;
           transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+/* --- trending --- */
+#trending {
+  padding: 5% 10%;
+  & .center-text {
+    & h2 {
+      color: #111;
+      font-size: 28px;
+      text-transform: capitalize;
+      text-align: center;
+
+      & span {
+        color: var(--pink-color);
+      }
+    }
+  }
+
+  & .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 20px;
+
+    & .row {
+      position: relative;
+      transition: all 0.3s ease;
+
+      & img {
+        width: 100%;
+        height: auto;
+        transition: 0.3s ease;
+        border-radius: 12px;
+
+        &:hover {
+          transform: scale(0.95);
+          box-shadow: 0 0 10px #b7b7b7;
+          cursor: pointer;
+        }
+      }
+
+      & .product-text {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: green;
+        padding: 3px 10px;
+        border-radius: 2px;
+      }
+
+      & .hear-icon {
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+
+        &:hover {
+          color: var(--pink-color);
+          cursor: pointer;
+        }
+      }
+
+      & .ratting {
+        & i {
+          color: tomato;
+          font-size: 18px;
+        }
+      }
+
+      & .price {
+        & h4 {
+          color: #111;
+          font-size: 16px;
+          text-transform: capitalize;
+          font-weight: 400;
+        }
+
+        & p {
+          color: #151515;
+          font-size: 14px;
+          font-weight: 600;
         }
       }
     }
